@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PovraRegistra.Views.PrincipalView"
+    x:Name="PaginaPrincipal"
+    Title="Papoi Skins"
+    BackgroundColor="#101010">
+
+    <Grid
+        RowDefinitions="Auto,*,Auto"
+        BackgroundColor="#101010">
+
+        <!-- CABEÇALHO -->
+        <VerticalStackLayout
+            Grid.Row="0"
+            Padding="20,14,20,12"
+            Spacing="5"
+            BackgroundColor="#191919">
+
+            <Label
+                Text="PAPOI SKINS"
+                FontSize="28"
+                FontAttributes="Bold"
+                TextColor="#EF3038"
+                HorizontalOptions="Center"/>
+
+            <Label
+                Text="CS2 SKIN MARKET"
+                FontSize="11"
+                CharacterSpacing="3"
+                TextColor="#A1A1AA"
+                HorizontalOptions="Center"/>
+
+            <BoxView
+                HeightRequest="2"
+                WidthRequest="60"
+                Color="#EF3038"
+                HorizontalOptions="Center"
+                Margin="0,4,0,6"/>
+
+            <Label
+                Text="{Binding Nome}"
+                FontSize="20"
+                FontAttributes="Bold"
+                TextColor="White"
+                HorizontalOptions="Center"/>
+
+            <Label
+                Text="{Binding Tipo}"
+                FontSize="13"
+                TextColor="#A1A1AA"
+                HorizontalOptions="Center"/>
+
+        </VerticalStackLayout>
+
+        <!-- ÁREA PRINCIPAL -->
+        <Grid
+            Grid.Row="1"
+            Padding="16,12,16,0"
+            RowDefinitions="Auto,*">
+
+            <!-- AÇÕES E TÍTULO -->
+            <VerticalStackLayout
+                Grid.Row="0"
+                Spacing="9">
+
+                <Button
+                    x:Name="BotaoNova"
+                    Text="+  CADASTRAR NOVA SKIN"
+                    Clicked="NovaSkinClicked"
+                    BackgroundColor="#EF3038"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="10"
+                    HeightRequest="46"
+                    IsVisible="False"/>
+
+                <Button
+                    Text="ATUALIZAR CATÁLOGO"
+                    Clicked="AtualizarClicked"
+                    BackgroundColor="#252528"
+                    TextColor="White"
+                    BorderColor="#38383D"
+                    BorderWidth="1"
+                    CornerRadius="10"
+                    HeightRequest="42"/>
+
+                <Label
+                    Text="CATÁLOGO DE SKINS"
+                    FontSize="17"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    Margin="2,5,0,2"/>
+
+                <BoxView
+                    HeightRequest="1"
+                    Color="#38383D"/>
+
+            </VerticalStackLayout>
+
+            <!-- LISTA ROLÁVEL -->
+
+            <CollectionView
+    x:Name="ListaSkins"
+    Grid.Row="1"
+    SelectionMode="None"
+    Margin="0,8,0,8"
+    ItemsLayout="HorizontalList"
+    ItemSizingStrategy="MeasureAllItems">
+
+                <CollectionView.EmptyView>
+                    <VerticalStackLayout
+            Spacing="8"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+                        <Label
+                Text="Nenhuma skin cadastrada."
+                FontSize="15"
+                TextColor="#A1A1AA"
+                HorizontalOptions="Center"/>
+                        <Label
+                Text="As skins aparecerão aqui."
+                FontSize="12"
+                TextColor="#71717A"
+                HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </CollectionView.EmptyView>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame
+                WidthRequest="190"
+                HeightRequest="330"
+                BackgroundColor="#1C1C1F"
+                BorderColor="#38383D"
+                CornerRadius="12"
+                Padding="10"
+                Margin="0,0,10,0"
+                HasShadow="False">
+
+                            <VerticalStackLayout Spacing="6">
+
+                                <Border
+                        BackgroundColor="#141416"
+                        Stroke="#303035"
+                        StrokeThickness="1"
+                        HeightRequest="105"
+                        Padding="4"
+                        StrokeShape="RoundRectangle 8">
+                                    <Image
+                            Source="{Binding ImagemUrl}"
+                            Aspect="AspectFit"/>
+                                </Border>
+
+                                <Label
+                        Text="{Binding Nome}"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        MaxLines="2"
+                        LineBreakMode="TailTruncation"/>
+
+                                <Label
+                        Text="{Binding Arma}"
+                        FontSize="12"
+                        TextColor="#EF646A"
+                        MaxLines="1"
+                        LineBreakMode="TailTruncation"/>
+
+                                <Label
+                        Text="{Binding Descricao}"
+                        FontSize="11"
+                        TextColor="#C4C4CC"
+                        MaxLines="2"
+                        LineBreakMode="TailTruncation"/>
+
+                                <Label
+                        Text="{Binding Preco, StringFormat='R$ {0:F2}'}"
+                        FontSize="17"
+                        FontAttributes="Bold"
+                        TextColor="#EF3038"
+                        MaxLines="1"/>
+
+                                <Button
+                        Text="SELECIONAR"
+                        Clicked="SelecionarClicked"
+                        CommandParameter="{Binding .}"
+                        IsVisible="{Binding Source={x:Reference PaginaPrincipal}, Path=ClienteLogado}"
+                        FontSize="11"
+                        Padding="4"
+                        BackgroundColor="#EF3038"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        CornerRadius="7"
+                        HeightRequest="34"/>
+
+                                <Grid
+                        ColumnDefinitions="*,*"
+                        ColumnSpacing="5"
+                        IsVisible="{Binding Source={x:Reference PaginaPrincipal}, Path=AdministradorLogado}">
+
+                                    <Button
+                            Grid.Column="0"
+                            Text="EDITAR"
+                            Clicked="EditarClicked"
+                            CommandParameter="{Binding .}"
+                            FontSize="10"
+                            Padding="2"
+                            BackgroundColor="#29292D"
+                            TextColor="White"
+                            BorderColor="#EF3038"
+                            BorderWidth="1"
+                            CornerRadius="7"
+                            HeightRequest="32"/>
+
+                                    <Button
+                            Grid.Column="1"
+                            Text="EXCLUIR"
+                            Clicked="ExcluirClicked"
+                            CommandParameter="{Binding .}"
+                            FontSize="10"
+                            Padding="2"
+                            BackgroundColor="#29292D"
+                            TextColor="#FF6B70"
+                            BorderColor="#5B2528"
+                            BorderWidth="1"
+                            CornerRadius="7"
+                            HeightRequest="32"/>
+                                </Grid>
+
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+
+        </Grid>
+
+        <!-- BARRA INFERIOR FIXA -->
+        <Grid
+            Grid.Row="2"
+            Padding="12,8"
+            BackgroundColor="#191919"
+            ColumnDefinitions="*,*"
+            ColumnSpacing="10">
+
+            <Button
+                Grid.Column="0"
+                Text="HISTÓRICO"
+                Clicked="HistoricoClicked"
+                BackgroundColor="#29292D"
+                TextColor="White"
+                BorderColor="#38383D"
+                BorderWidth="1"
+                CornerRadius="9"
+                HeightRequest="42"/>
+
+            <Button
+                Grid.Column="1"
+                Text="SAIR"
+                Clicked="SairClicked"
+                BackgroundColor="#EF3038"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="9"
+                HeightRequest="42"/>
+
+        </Grid>
+
+    </Grid>
+</ContentPage>

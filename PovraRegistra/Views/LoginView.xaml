@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PovraRegistra.Views.LoginView"
+    Title="Papoi Skins"
+    BackgroundColor="#101010">
+
+    <Grid Padding="24"
+          RowDefinitions="*,Auto,*">
+
+        <VerticalStackLayout
+            Grid.Row="1"
+            Spacing="10"
+            HorizontalOptions="Fill"
+            VerticalOptions="Center"
+            WidthRequest="-1"
+            MaximumWidthRequest="600">
+
+            <!-- Marca -->
+            <Frame
+                BackgroundColor="#EF3038"
+                CornerRadius="18"
+                Padding="6"
+                HasShadow="False"
+                WidthRequest="64"
+                HeightRequest="64"
+                HorizontalOptions="Center">
+
+                <Label
+                    Text="P"
+                    FontSize="38"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    VerticalOptions="Center"/>
+            </Frame>
+
+            <Label
+                Text="PAPOI SKINS"
+                FontSize="30"
+                FontAttributes="Bold"
+                TextColor="#EF3038"
+                HorizontalOptions="Center"/>
+
+            <Label
+                Text="CS2 SKIN MARKET"
+                FontSize="11"
+                CharacterSpacing="3"
+                TextColor="#A1A1AA"
+                HorizontalOptions="Center"/>
+
+            <BoxView
+                HeightRequest="2"
+                WidthRequest="60"
+                Color="#EF3038"
+                HorizontalOptions="Center"
+                Margin="0,0,0,4"/>
+
+            <!-- Boas-vindas -->
+            <Label
+                Text="Bem-vindo de volta!"
+                FontSize="22"
+                FontAttributes="Bold"
+                TextColor="White"
+                HorizontalOptions="Center"/>
+
+            <Label
+                Text="Entre para acessar a loja."
+                FontSize="14"
+                TextColor="#A1A1AA"
+                HorizontalOptions="Center"
+                Margin="0,0,0,5"/>
+
+            <!-- E-mail -->
+            <Label
+                Text="E-MAIL"
+                FontSize="12"
+                FontAttributes="Bold"
+                TextColor="#D4D4D8"/>
+
+            <Entry
+                Placeholder="Digite seu e-mail"
+                Keyboard="Email"
+                Text="{Binding Email}"
+                TextColor="White"
+                PlaceholderColor="#85858D"
+                BackgroundColor="#222226"
+                HeightRequest="48"
+                ClearButtonVisibility="WhileEditing"/>
+
+            <!-- Senha -->
+            <Label
+                Text="SENHA"
+                FontSize="12"
+                FontAttributes="Bold"
+                TextColor="#D4D4D8"/>
+
+            <Entry
+                Placeholder="Digite sua senha"
+                IsPassword="True"
+                Text="{Binding Senha}"
+                TextColor="White"
+                PlaceholderColor="#85858D"
+                BackgroundColor="#222226"
+                HeightRequest="48"/>
+
+            <!-- Entrar -->
+            <Button
+                Text="ENTRAR NA LOJA"
+                Command="{Binding EntrarCommand}"
+                BackgroundColor="#EF3038"
+                TextColor="White"
+                FontAttributes="Bold"
+                FontSize="15"
+                HeightRequest="48"
+                CornerRadius="10"
+                Margin="0,5,0,0"/>
+
+            <!-- Cadastro -->
+            <Button
+                Text="CRIAR MINHA CONTA"
+                Command="{Binding RegistrarCommand}"
+                BackgroundColor="#222226"
+                TextColor="White"
+                BorderColor="#EF3038"
+                BorderWidth="1"
+                FontSize="14"
+                HeightRequest="44"
+                CornerRadius="10"/>
+
+            <!-- Rodapé -->
+            <Label
+                Text="PAPOI SKINS  •  CS2"
+                FontSize="10"
+                TextColor="#71717A"
+                HorizontalOptions="Center"
+                Margin="0,4,0,0"/>
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

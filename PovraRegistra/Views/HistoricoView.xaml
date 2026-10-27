@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PovraRegistra.Views.HistoricoView"
+    Title="Papoi Skins - Histórico"
+    BackgroundColor="#101010">
+
+    <Grid RowDefinitions="Auto,*"
+          BackgroundColor="#101010">
+
+        <!-- Cabeçalho -->
+        <VerticalStackLayout
+            Grid.Row="0"
+            Padding="20,18,20,16"
+            BackgroundColor="#191919"
+            Spacing="5">
+
+            <Label
+                Text="PAPOI SKINS"
+                FontSize="27"
+                FontAttributes="Bold"
+                TextColor="#EF3038"
+                HorizontalOptions="Center"/>
+
+            <Label
+                Text="HISTÓRICO DE SELEÇÕES"
+                FontSize="11"
+                CharacterSpacing="2"
+                TextColor="#A1A1AA"
+                HorizontalOptions="Center"/>
+
+            <BoxView
+                HeightRequest="2"
+                WidthRequest="60"
+                Color="#EF3038"
+                HorizontalOptions="Center"
+                Margin="0,5,0,0"/>
+
+        </VerticalStackLayout>
+
+        <!-- Lista do histórico -->
+        <CollectionView
+            x:Name="ListaHistorico"
+            Grid.Row="1"
+            Margin="16,12"
+            SelectionMode="None">
+
+            <CollectionView.EmptyView>
+                <VerticalStackLayout
+                    Spacing="12"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center">
+
+                    <Label
+                        Text="◷"
+                        FontSize="48"
+                        TextColor="#EF3038"
+                        HorizontalOptions="Center"/>
+
+                    <Label
+                        Text="Nenhuma seleção registrada ainda."
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        HorizontalTextAlignment="Center"/>
+
+                    <Label
+                        Text="Quando uma skin for selecionada, ela aparecerá aqui."
+                        FontSize="13"
+                        TextColor="#A1A1AA"
+                        HorizontalTextAlignment="Center"/>
+
+                </VerticalStackLayout>
+            </CollectionView.EmptyView>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <Frame
+                        BackgroundColor="#1C1C1F"
+                        BorderColor="#38383D"
+                        CornerRadius="12"
+                        Padding="15"
+                        Margin="0,0,0,12"
+                        HasShadow="False">
+
+                        <Grid ColumnDefinitions="4,*"
+                              ColumnSpacing="12">
+
+                            <BoxView
+                                Grid.Column="0"
+                                Color="#EF3038"
+                                CornerRadius="2"/>
+
+                            <VerticalStackLayout
+                                Grid.Column="1"
+                                Spacing="9">
+
+                                <Label
+                                    Text="{Binding ItemNome, StringFormat='SKIN: {0}'}"
+                                    FontAttributes="Bold"
+                                    FontSize="18"
+                                    TextColor="White"/>
+
+                                <Grid ColumnDefinitions="Auto,*"
+                                      ColumnSpacing="8">
+
+                                    <Label
+                                        Grid.Column="0"
+                                        Text="USUÁRIO"
+                                        FontSize="11"
+                                        FontAttributes="Bold"
+                                        TextColor="#EF646A"
+                                        VerticalOptions="Center"/>
+
+                                    <Label
+                                        Grid.Column="1"
+                                        Text="{Binding UsuarioNome}"
+                                        FontSize="14"
+                                        TextColor="#D4D4D8"
+                                        VerticalOptions="Center"/>
+
+                                </Grid>
+
+                                <BoxView
+                                    HeightRequest="1"
+                                    Color="#38383D"/>
+
+                                <Label
+                                    Text="{Binding DataHora, StringFormat='Data e hora: {0:dd/MM/yyyy HH:mm}'}"
+                                    FontSize="12"
+                                    TextColor="#A1A1AA"/>
+
+                            </VerticalStackLayout>
+
+                        </Grid>
+                    </Frame>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </Grid>
+</ContentPage>

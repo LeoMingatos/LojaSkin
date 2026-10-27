@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PovraRegistra.Views.SkinFormView"
+    Title="Papoi Skins - Skin"
+    BackgroundColor="#101010">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="24"
+            Spacing="13"
+            HorizontalOptions="Fill"
+            MaximumWidthRequest="650">
+
+            <!-- Cabeçalho -->
+            <Frame
+                BackgroundColor="#EF3038"
+                CornerRadius="15"
+                Padding="5"
+                HasShadow="False"
+                WidthRequest="58"
+                HeightRequest="58"
+                HorizontalOptions="Center">
+
+                <Label
+                    Text="P"
+                    FontSize="35"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"/>
+            </Frame>
+
+            <Label
+                Text="PAPOI SKINS"
+                FontSize="28"
+                FontAttributes="Bold"
+                TextColor="#EF3038"
+                HorizontalOptions="Center"/>
+
+            <Label
+                Text="GERENCIAMENTO DE SKINS"
+                FontSize="11"
+                CharacterSpacing="2"
+                TextColor="#A1A1AA"
+                HorizontalOptions="Center"/>
+
+            <BoxView
+                HeightRequest="2"
+                WidthRequest="60"
+                Color="#EF3038"
+                HorizontalOptions="Center"
+                Margin="0,0,0,8"/>
+
+            <Label
+                Text="Dados da skin"
+                FontSize="23"
+                FontAttributes="Bold"
+                TextColor="White"/>
+
+            <Label
+                Text="Preencha as informações do item abaixo."
+                FontSize="13"
+                TextColor="#A1A1AA"
+                Margin="0,0,0,5"/>
+
+            <!-- Nome -->
+            <Label
+                Text="NOME DA SKIN"
+                FontSize="12"
+                FontAttributes="Bold"
+                TextColor="#D4D4D8"/>
+
+            <Entry
+                Placeholder="Ex.: Asiimov"
+                Text="{Binding Nome}"
+                TextColor="White"
+                PlaceholderColor="#85858D"
+                BackgroundColor="#222226"
+                HeightRequest="50"/>
+
+            <!-- Arma -->
+            <Label
+                Text="ARMA"
+                FontSize="12"
+                FontAttributes="Bold"
+                TextColor="#D4D4D8"/>
+
+            <Entry
+                Placeholder="Ex.: AK-47, AWP, M4A1-S"
+                Text="{Binding Arma}"
+                TextColor="White"
+                PlaceholderColor="#85858D"
+                BackgroundColor="#222226"
+                HeightRequest="50"/>
+
+            <!-- Condição -->
+            <Label
+                Text="ESTADO DE CONSERVAÇÃO"
+                FontSize="12"
+                FontAttributes="Bold"
+                TextColor="#D4D4D8"/>
+
+            <Picker
+                Title="Selecione a condição"
+                ItemsSource="{Binding Condicoes}"
+                SelectedItem="{Binding Descricao, Mode=TwoWay}"
+                TextColor="White"
+                TitleColor="#85858D"
+                BackgroundColor="#222226"
+                HeightRequest="50"/>
+
+            <Label
+                Text="Selecione a condição correspondente à skin."
+                FontSize="12"
+                TextColor="#A1A1AA"/>
+
+            <!-- Preço -->
+            <Label
+                Text="PREÇO (R$)"
+                FontSize="12"
+                FontAttributes="Bold"
+                TextColor="#D4D4D8"/>
+
+            <Entry
+                Placeholder="Ex.: 150,00"
+                Keyboard="Numeric"
+                Text="{Binding PrecoTexto}"
+                TextColor="White"
+                PlaceholderColor="#85858D"
+                BackgroundColor="#222226"
+                HeightRequest="50"/>
+
+            <!-- Imagem -->
+            <Label
+                Text="URL DA IMAGEM"
+                FontSize="12"
+                FontAttributes="Bold"
+                TextColor="#D4D4D8"/>
+
+            <Entry
+                Placeholder="Cole o endereço da imagem (opcional)"
+                Keyboard="Url"
+                Text="{Binding ImagemUrl}"
+                TextColor="White"
+                PlaceholderColor="#85858D"
+                BackgroundColor="#222226"
+                HeightRequest="50"/>
+
+            <Label
+                Text="Use um endereço de imagem acessível pela internet."
+                FontSize="12"
+                TextColor="#A1A1AA"/>
+
+            <!-- Salvar -->
+            <Button
+                Text="SALVAR SKIN"
+                Command="{Binding SalvarCommand}"
+                BackgroundColor="#EF3038"
+                TextColor="White"
+                FontAttributes="Bold"
+                FontSize="15"
+                CornerRadius="10"
+                HeightRequest="50"
+                Margin="0,12,0,0"/>
+
+            <Label
+                Text="PAPOI SKINS  •  CS2"
+                FontSize="10"
+                TextColor="#71717A"
+                HorizontalOptions="Center"
+                Margin="0,4,0,0"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

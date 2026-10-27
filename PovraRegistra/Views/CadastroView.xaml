@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PovraRegistra.Views.CadastroView"
+    Title="Papoi Skins - Cadastro"
+    BackgroundColor="#101010">
+
+    <ScrollView>
+        <Grid Padding="20">
+
+            <VerticalStackLayout
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                WidthRequest="600"
+                MaximumWidthRequest="600"
+                Spacing="0">
+
+                <!-- Cabeçalho -->
+                <Label
+                    Text="PAPOI SKINS"
+                    FontSize="30"
+                    FontAttributes="Bold"
+                    TextColor="#EF3038"
+                    HorizontalOptions="Center"
+                    Margin="0,0,0,5"/>
+
+                <Label
+                    Text="CS2 SKIN MARKET"
+                    FontSize="11"
+                    CharacterSpacing="2"
+                    TextColor="#B8B8C0"
+                    HorizontalOptions="Center"
+                    Margin="0,0,0,18"/>
+
+                <Label
+                    Text="Crie sua conta"
+                    FontSize="23"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    Margin="0,0,0,5"/>
+
+                <Label
+                    Text="Cadastre-se para acessar a loja."
+                    FontSize="13"
+                    TextColor="#A1A1AA"
+                    HorizontalOptions="Center"
+                    Margin="0,0,0,20"/>
+
+                <!-- Nome -->
+                <Label
+                    Text="NOME COMPLETO"
+                    FontSize="12"
+                    FontAttributes="Bold"
+                    TextColor="#D4D4D8"
+                    Margin="0,0,0,7"/>
+
+                <Entry
+                    Placeholder="Digite seu nome completo"
+                    Text="{Binding Nome}"
+                    TextColor="White"
+                    PlaceholderColor="#A1A1AA"
+                    BackgroundColor="#222226"
+                    HeightRequest="48"
+                    Margin="0,0,0,12"/>
+
+                <!-- CPF -->
+                <Label
+                    Text="CPF"
+                    FontSize="12"
+                    FontAttributes="Bold"
+                    TextColor="#D4D4D8"
+                    Margin="0,0,0,7"/>
+
+                <Entry
+                    Placeholder="Digite seu CPF (11 números)"
+                    Keyboard="Numeric"
+                    MaxLength="11"
+                    Text="{Binding CPF}"
+                    TextColor="White"
+                    PlaceholderColor="#A1A1AA"
+                    BackgroundColor="#222226"
+                    HeightRequest="48"
+                    Margin="0,0,0,12"/>
+
+              
+
+                <!-- E-mail e senha -->
+                <Grid
+                    ColumnDefinitions="*,*"
+                    ColumnSpacing="12"
+                    Margin="0,0,0,12">
+
+                    <VerticalStackLayout
+                        Grid.Column="0"
+                        Spacing="7">
+
+                        <Label
+                            Text="E-MAIL"
+                            FontSize="12"
+                            FontAttributes="Bold"
+                            TextColor="#D4D4D8"/>
+
+                        <Entry
+                            Placeholder="Digite seu e-mail"
+                            Keyboard="Email"
+                            Text="{Binding Email}"
+                            TextColor="White"
+                            PlaceholderColor="#A1A1AA"
+                            BackgroundColor="#222226"
+                            HeightRequest="48"/>
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout
+                        Grid.Column="1"
+                        Spacing="7">
+
+                        <Label
+                            Text="SENHA"
+                            FontSize="12"
+                            FontAttributes="Bold"
+                            TextColor="#D4D4D8"/>
+
+                        <Entry
+                            Placeholder="Digite sua senha"
+                            IsPassword="True"
+                            Text="{Binding Senha}"
+                            TextColor="White"
+                            PlaceholderColor="#A1A1AA"
+                            BackgroundColor="#222226"
+                            HeightRequest="48"/>
+                    </VerticalStackLayout>
+
+                </Grid>
+
+                <!-- Tipo de conta -->
+                <Label
+                    Text="TIPO DE CONTA"
+                    FontSize="12"
+                    FontAttributes="Bold"
+                    TextColor="#D4D4D8"
+                    Margin="0,0,0,7"/>
+
+                <Picker
+                        Title=""
+                        ItemsSource="{Binding TiposUsuario}"
+                        SelectedItem="{Binding Tipo}"
+                        TextColor="White"
+                        TitleColor="#A1A1AA"
+                        BackgroundColor="#222226"
+                        HeightRequest="48"
+                        FontSize="14"/>
+
+                <!-- Data de nascimento -->
+                <Label
+                        Text="DATA DE NASCIMENTO"
+                        FontSize="12"
+                        FontAttributes="Bold"
+                        TextColor="#D4D4D8"
+                        Margin="0,0,0,7"/>
+
+              
+                     
+
+                    <DatePicker
+                        Date="{Binding DataNascimento}"
+                        Format="dd/MM/yyyy"
+                        TextColor="White"
+                        BackgroundColor="#222226"
+                        HeightRequest="48"/>   
+                
+                
+
+
+                <!-- Botão de cadastro -->
+                <Button
+                    Text="CRIAR MINHA CONTA"
+                    Command="{Binding SalvarCommand}"
+                    BackgroundColor="#EF3038"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    FontSize="14"
+                    CornerRadius="9"
+                    HeightRequest="48"
+                    Margin="0,0,0,10"/>
+
+                <!-- Rodapé -->
+                <Label
+                    Text="PAPOI SKINS  •  CS2"
+                    FontSize="10"
+                    TextColor="#71717A"
+                    HorizontalOptions="Center"
+                    Margin="0,5,0,0"/>
+
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

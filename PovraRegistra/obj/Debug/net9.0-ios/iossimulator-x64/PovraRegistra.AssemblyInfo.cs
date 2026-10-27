@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PovraRegistra")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+506237ec307f0f1b9779eeca5bd09d57135255e8")]
 [assembly: System.Reflection.AssemblyProductAttribute("PovraRegistra")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PovraRegistra")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

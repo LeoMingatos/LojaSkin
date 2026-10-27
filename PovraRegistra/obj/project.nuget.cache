@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9Xv3q5TH5lw=",
+  "dgSpecHash": "iYvhokFnwFE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\minga\\OneDrive\\Área de Trabalho\\PovraRegistra\\PovraRegistra.csproj",
+  "projectFilePath": "C:\\Users\\minga\\OneDrive\\Documentos\\LojaSkin\\PovraRegistra\\PovraRegistra.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\minga\\.nuget\\packages\\googlegson\\2.13.0.1\\googlegson.2.13.0.1.nupkg.sha512",
     "C:\\Users\\minga\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.9\\microsoft.extensions.configuration.9.0.9.nupkg.sha512",

@@ -28510,11 +28510,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\minga\\OneDrive\\Área de Trabalho\\PovraRegistra\\PovraRegistra.csproj",
+      "projectUniqueName": "C:\\Users\\minga\\OneDrive\\Documentos\\LojaSkin\\PovraRegistra\\PovraRegistra.csproj",
       "projectName": "PovraRegistra",
-      "projectPath": "C:\\Users\\minga\\OneDrive\\Área de Trabalho\\PovraRegistra\\PovraRegistra.csproj",
+      "projectPath": "C:\\Users\\minga\\OneDrive\\Documentos\\LojaSkin\\PovraRegistra\\PovraRegistra.csproj",
       "packagesPath": "C:\\Users\\minga\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\minga\\OneDrive\\Área de Trabalho\\PovraRegistra\\obj\\",
+      "outputPath": "C:\\Users\\minga\\OneDrive\\Documentos\\LojaSkin\\PovraRegistra\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [

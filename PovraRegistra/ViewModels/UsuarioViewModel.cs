@@ -128,23 +128,17 @@ public class UsuarioViewModel : BaseNotifyViewModel
     {
         EntrarCommand = new Command(async () => await Entrar());
 
-        RegistrarCommand = new Command(async () =>
-        {
+        RegistrarCommand = new Command(async () => {
             var pagina = Application.Current?.MainPage;
-
             if (pagina != null)
                 await pagina.Navigation.PushAsync(new CadastroView());
         });
 
         SalvarCommand = new Command(async () => await Salvar());
         AtualizarCommand = new Command(async () => await EditarUsuario());
-
-        VisualizarCommand = new Command(() =>
-        {
+        VisualizarCommand = new Command(() => {
             MostrarDados = !MostrarDados;
         });
-
-        CarregarUsuario();
     }
 
     public void CarregarUsuario()

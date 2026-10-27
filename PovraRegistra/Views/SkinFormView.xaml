@@ -3,7 +3,8 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="PovraRegistra.Views.SkinFormView"
-    Title="Papoi Skins - Skin"
+    Title=""
+    Shell.NavBarIsVisible="False"
     BackgroundColor="#101010">
 
     <ScrollView>
@@ -14,29 +15,13 @@
             MaximumWidthRequest="650">
 
             <!-- Cabeçalho -->
-            <Frame
-                BackgroundColor="#EF3038"
-                CornerRadius="15"
-                Padding="5"
-                HasShadow="False"
-                WidthRequest="58"
-                HeightRequest="58"
-                HorizontalOptions="Center">
-
-                <Label
-                    Text="P"
-                    FontSize="35"
-                    FontAttributes="Bold"
-                    TextColor="White"
-                    HorizontalTextAlignment="Center"
-                    VerticalTextAlignment="Center"/>
-            </Frame>
-
-            <Label
-                Text="PAPOI SKINS"
-                FontSize="28"
-                FontAttributes="Bold"
-                TextColor="#EF3038"
+            <Image
+                Grid.Column="0"
+                Source="papoi_logo.png"
+                WidthRequest="125"
+                HeightRequest="100"
+                Aspect="AspectFit"
+                VerticalOptions="Center"
                 HorizontalOptions="Center"/>
 
             <Label

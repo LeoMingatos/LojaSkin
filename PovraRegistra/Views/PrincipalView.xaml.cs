@@ -182,6 +182,7 @@ public partial class PrincipalView : ContentPage
     private async void SairClicked(object sender, EventArgs e)
     {
         UsuarioSingleton.GetInstance().Usuario = null;
+
         await Navigation.PopToRootAsync();
     }
 }

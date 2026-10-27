@@ -12,55 +12,55 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PovraRegistra
-build_property.ProjectDir = C:\Users\minga\OneDrive\Área de Trabalho\PovraRegistra\
+build_property.ProjectDir = C:\Users\minga\OneDrive\Documentos\LojaSkin\PovraRegistra\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/minga/OneDrive/Área de Trabalho/PovraRegistra/App.xaml]
+[C:/Users/minga/OneDrive/Documentos/LojaSkin/PovraRegistra/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = PovraRegistra.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/minga/OneDrive/Área de Trabalho/PovraRegistra/Resources/Styles/Colors.xaml]
+[C:/Users/minga/OneDrive/Documentos/LojaSkin/PovraRegistra/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = PovraRegistra.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Users/minga/OneDrive/Área de Trabalho/PovraRegistra/Resources/Styles/Styles.xaml]
+[C:/Users/minga/OneDrive/Documentos/LojaSkin/PovraRegistra/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = PovraRegistra.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/minga/OneDrive/Área de Trabalho/PovraRegistra/Views/CadastroView.xaml]
+[C:/Users/minga/OneDrive/Documentos/LojaSkin/PovraRegistra/Views/CadastroView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = PovraRegistra.Views.CadastroView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\CadastroView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\CadastroView.xaml
 
-[C:/Users/minga/OneDrive/Área de Trabalho/PovraRegistra/Views/HistoricoView.xaml]
+[C:/Users/minga/OneDrive/Documentos/LojaSkin/PovraRegistra/Views/HistoricoView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = PovraRegistra.Views.HistoricoView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\HistoricoView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\HistoricoView.xaml
 
-[C:/Users/minga/OneDrive/Área de Trabalho/PovraRegistra/Views/LoginView.xaml]
+[C:/Users/minga/OneDrive/Documentos/LojaSkin/PovraRegistra/Views/LoginView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = PovraRegistra.Views.LoginView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\LoginView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\LoginView.xaml
 
-[C:/Users/minga/OneDrive/Área de Trabalho/PovraRegistra/Views/PrincipalView.xaml]
+[C:/Users/minga/OneDrive/Documentos/LojaSkin/PovraRegistra/Views/PrincipalView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = PovraRegistra.Views.PrincipalView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\PrincipalView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\PrincipalView.xaml
 
-[C:/Users/minga/OneDrive/Área de Trabalho/PovraRegistra/Views/SkinFormView.xaml]
+[C:/Users/minga/OneDrive/Documentos/LojaSkin/PovraRegistra/Views/SkinFormView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = PovraRegistra.Views.SkinFormView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\SkinFormView.xaml
